@@ -64,14 +64,14 @@ $ dockr pull [image name]
 $ docker run --gpus all --rm -it -p 8282:8888 -v $HOME/ai-basics:/tf --workdir=/tf --name ai-basics tensorflow/tensorflow:latest-gpu-jupyter
 ```
 
--- gpus all : gpu 모두 할당 (컨테이너에서 서버 gpu를 모두 사용할 수 있도록 함)
--- rm : 컨테이너 종료 시 자동으로 삭제
--it : 해당 컨테이너의 쉘(shell)과 직접 상호작용 하면서 명령어 실행 가능
--p : (8282:8888) 서버의 포트 8282와 컨테이너의 포트 8888연결
--v : ($HOME/ai-basics:/home) 서버의 HOME/ai-basics와 컨테이너의 home 연결
---workdir : (=/home) 컨테이너의 작업폴더를 /home으로 설정
---name : (ai-basics) 컨테이너의 이름을 ai-basics로 설정
-tensorflow/tensorflow:latest-gpu-jupyter : 사용할 이미지 이름
+-- gpus all : gpu 모두 할당 (컨테이너에서 서버 gpu를 모두 사용할 수 있도록 함)   
+-- rm : 컨테이너 종료 시 자동으로 삭제    
+-it : 해당 컨테이너의 쉘(shell)과 직접 상호작용 하면서 명령어 실행 가능   
+-p : (8282:8888) 서버의 포트 8282와 컨테이너의 포트 8888연결    
+-v : ($HOME/ai-basics:/home) 서버의 HOME/ai-basics와 컨테이너의 home 연결    
+--workdir : (=/home) 컨테이너의 작업폴더를 /home으로 설정   
+--name : (ai-basics) 컨테이너의 이름을 ai-basics로 설정   
+tensorflow/tensorflow:latest-gpu-jupyter : 사용할 이미지 이름   
 
 
 ## 컨테이너에서 jupyter notebook 실행
